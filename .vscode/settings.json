@@ -1,0 +1,6 @@
+{
+  "standard.enable": false,
+  "editor.formatOnSave": true
+  //"branchwarnings.protectedBranches": ["master", "dev"],
+  //"branchwarnings.suppressPopup": false
+}
