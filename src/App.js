@@ -4,36 +4,11 @@ import Drawer from '@material-ui/core/Drawer'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 
+import DrawerPanel from './components/drawerPanel'
+import ConfigPanel from './components/configPanel'
 import Renderer from './components/renderer'
 
-const drawerWidth = 240
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-    height: '100vh',
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex'
-  },
-  drawerPaper: {
-    position: 'relative',
-    width: drawerWidth,
-    borderRight: 'none',
-    backgroundColor: theme.palette.background.darker
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit,
-    minWidth: 0 // So the Typography noWrap works
-  },
-  tabContent: {
-    padding: theme.spacing.unit * 2,
-    paddingTop: theme.spacing.unit * 3
-  }
-})
+import styles from './App.style.js'
 
 class App extends Component {
   state = {
@@ -55,7 +30,9 @@ class App extends Component {
             paper: classes.drawerPaper
           }}
         >
-          Test
+          <DrawerPanel title="Config">
+            <ConfigPanel />
+          </DrawerPanel>
         </Drawer>
         <div className={classes.content}>
           <Tabs
