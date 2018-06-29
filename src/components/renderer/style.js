@@ -4,10 +4,14 @@ const styles = theme => ({
     flex: 1
   },
   domparent: {
-    minHeight: '300px',
     color: '#FFF',
     fontFamily: theme.typography.fontFamily,
-    fontSize: theme.typography.fontSize
+    fontSize: theme.typography.fontSize,
+    lineHeight: 0
+  },
+  iframe: {
+    border: 'none',
+    height: '200px'
   }
 })
 

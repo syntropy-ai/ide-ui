@@ -48,7 +48,7 @@ class App extends Component {
             <Tab label="Item Three" />
           </Tabs>
           <div className={classes.tabContent}>
-            {value === 0 && <Renderer />}
+            {value === 0 && <Renderer rendererId="abc" />}
             {value === 1 && <div>Item Two</div>}
             {value === 2 && <div>Item Three</div>}
           </div>
